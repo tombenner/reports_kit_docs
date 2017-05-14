@@ -28,11 +28,13 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'haml-rails'
 gem 'high_voltage'
 gem 'pg'
+gem 'timecop'
 
 gem 'reports_kit', path: '../reports_kit'
 
 group :development do
   gem 'better_errors'
   gem 'html2haml'
+  gem 'pry-rails'
   gem 'rails_layout'
 end

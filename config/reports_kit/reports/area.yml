@@ -1,0 +1,11 @@
+measure: flight
+dimensions:
+- flight_at
+- key: origin_market
+  limit: 7
+chart:
+  type: line
+  options:
+    scales:
+      yAxes:
+        - stacked: true

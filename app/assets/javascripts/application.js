@@ -13,5 +13,6 @@
 //= require jquery
 //= require rails-ujs
 //= require bootstrap-sprockets
+//= require_tree ./vendor
 //= require_tree .
 //= require reports_kit/application

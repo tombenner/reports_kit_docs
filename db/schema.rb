@@ -10,16 +10,60 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170512052651) do
+ActiveRecord::Schema.define(version: 20170512052655) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "flights", force: :cascade do |t|
-    t.datetime "flight_at"
-    t.string "carrier_key"
+  create_table "airlines", force: :cascade do |t|
+    t.string "code"
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["code"], name: "index_airlines_on_code"
+  end
+
+  create_table "airports", force: :cascade do |t|
+    t.string "code"
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["code"], name: "index_airports_on_code"
+  end
+
+  create_table "carriers", force: :cascade do |t|
+    t.string "code"
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["code"], name: "index_carriers_on_code"
+  end
+
+  create_table "flights", force: :cascade do |t|
+    t.datetime "flight_at"
+    t.string "number"
+    t.integer "carrier_id"
+    t.integer "origin_airport_id"
+    t.integer "origin_market_id"
+    t.integer "destination_airport_id"
+    t.integer "destination_market_id"
+    t.integer "delay"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["carrier_id"], name: "index_flights_on_carrier_id"
+    t.index ["destination_airport_id"], name: "index_flights_on_destination_airport_id"
+    t.index ["destination_market_id"], name: "index_flights_on_destination_market_id"
+    t.index ["flight_at"], name: "index_flights_on_flight_at"
+    t.index ["origin_airport_id"], name: "index_flights_on_origin_airport_id"
+    t.index ["origin_market_id"], name: "index_flights_on_origin_market_id"
+  end
+
+  create_table "markets", force: :cascade do |t|
+    t.string "code"
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["code"], name: "index_markets_on_code"
   end
 
 end

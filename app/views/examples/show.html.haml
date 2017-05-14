@@ -13,8 +13,9 @@
     .col-md-10
       .row
         .col-md-12
-          %h3= @example.name
-          %h4= @example.subtitle
+          %h3
+            = "#{@example.category}:"
+            = @example.name
           %br
           = render_report @example.config do |f|
             - if @example.view
@@ -28,7 +29,7 @@
               %h4 Config
               %p
                 %code
-                  = "config/reports_kit/reports/#{@example.file}.yml"
+                  = @yaml_path
               %pre
                 = preserve do
                   = @example.config.to_yaml.gsub(/^---/, '')
@@ -38,6 +39,7 @@
                 %p
                   %small
                     %em Note: The #{existing_keys.map { |key| %|"chart.#{key}"| }.to_sentence } #{'option'.pluralize(existing_keys.length)} #{ existing_keys.length > 1 ? 'are' : 'is' } configured using the same arguments as those in #{ link_to 'Chart.js', 'http://www.chartjs.org/docs/' }.
+              %br
               %h4 View
               %p
                 %code
@@ -48,3 +50,12 @@
                     = "= render_report '#{@example.file}' do\n  " + @example.view.gsub("\n", "\n  ")
                   - else
                     = "= render_report '#{@example.file}'"
+              %br
+              %h4 Model
+              - model_path = "app/models/#{@measure.key}.rb"
+              - model_content = File.read(Rails.root.join(model_path))
+              %p
+                %code
+                  = model_path
+              %pre
+                = model_content

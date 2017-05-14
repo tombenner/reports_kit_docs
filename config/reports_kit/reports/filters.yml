@@ -1,0 +1,16 @@
+measure:
+  key: flight
+  filters:
+  - carrier
+  - flight_at
+  - number
+dimensions:
+- flight_at
+- carrier
+chart:
+  options:
+    scales:
+      xAxes:
+        - stacked: true
+      yAxes:
+        - stacked: true

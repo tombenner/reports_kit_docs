@@ -1,0 +1,10 @@
+measure: flight
+dimensions:
+- key: origin_market
+  limit: 6
+- key: carrier
+  limit: 6
+chart:
+  options:
+    legend:
+      position: left

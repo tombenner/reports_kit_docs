@@ -1,0 +1,16 @@
+measure: flight
+dimensions:
+- carrier
+chart:
+  type: radar
+  options:
+    maintainAspectRatio: true
+    spanGaps: false
+    elements:
+      line:
+        tension: 0.000001
+    plugins:
+      filler:
+        propagate: false
+      samples_filler_analyser:
+        target: 'chart-analyser'
