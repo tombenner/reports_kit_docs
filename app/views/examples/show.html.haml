@@ -1,0 +1,50 @@
+.container
+  .row
+    .col-md-2
+      %ul.nav.nav-pills.nav-stacked
+        - last_category = nil
+        - @examples.each do |example|
+          - if last_category != example.category
+            %li.category-item= example.category
+          - last_category = example.category
+          %li{ role: 'presentation', class: example.key == @key ? 'active' : nil }
+            = link_to example.name, example_path(key: example.key)
+
+    .col-md-10
+      .row
+        .col-md-12
+          %h3= @example.name
+          %h4= @example.subtitle
+          %br
+          = render_report @example.config do |f|
+            - if @example.view
+              = Haml::Engine.new(@example.view).render(self, { f: f })
+              %br
+              %br
+
+          %br
+          .row
+            .col-md-7
+              %h4 Config
+              %p
+                %code
+                  = "config/reports_kit/reports/#{@example.file}.yml"
+              %pre
+                = preserve do
+                  = @example.config.to_yaml.gsub(/^---/, '')
+              - keys = %w(type datasets options)
+              - existing_keys = keys.select { |key| @example.config.to_yaml.include?(" #{key}:") }
+              - if existing_keys.present?
+                %p
+                  %small
+                    %em Note: The #{existing_keys.map { |key| %|"chart.#{key}"| }.to_sentence } #{'option'.pluralize(existing_keys.length)} #{ existing_keys.length > 1 ? 'are' : 'is' } configured using the same arguments as those in #{ link_to 'Chart.js', 'http://www.chartjs.org/docs/' }.
+              %h4 View
+              %p
+                %code
+                  = "app/views/my_controller/my_view.html.haml"
+              %pre
+                = preserve do
+                  - if @example.view
+                    = "= render_report '#{@example.file}' do\n  " + @example.view.gsub("\n", "\n  ")
+                  - else
+                    = "= render_report '#{@example.file}'"

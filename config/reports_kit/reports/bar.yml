@@ -1,0 +1,3 @@
+measure: flights
+dimensions:
+- flight_at
