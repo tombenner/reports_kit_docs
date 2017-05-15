@@ -1,0 +1,9 @@
+measure:
+  key: flight
+  filters:
+  - key: delay
+    criteria:
+      operator: '>'
+      value: 15
+dimensions:
+- carrier

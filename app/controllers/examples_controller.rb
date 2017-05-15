@@ -76,15 +76,105 @@ class ExamplesController < ApplicationController
       file: 'legend_bottom'
     },
     {
+      category: 'Legends',
+      name: 'None',
+      file: 'legend_none'
+    },
+    {
       category: 'Filters',
       name: 'All',
       file: 'filters',
       view: <<-EOF
+.pull-right
+  = f.date_range :flight_at
 = f.multi_autocomplete :carrier, scope: 'top', placeholder: 'Carrier...'
-= f.string_filter :number, placeholder: 'Flight number (e.g. 123)...', style: 'width: 160px;'
+= f.string_filter :carrier_name, placeholder: 'Carrier name (e.g. Airlines)...', style: 'width: 175px;'
+.checkbox
+  = label_tag :is_on_time do
+    = f.check_box :is_on_time
+    On time
+EOF
+    },
+    {
+      category: 'Filters',
+      name: 'Check Box',
+      file: 'filter_check_box',
+      view: <<-EOF
+.checkbox
+  = label_tag :is_on_time do
+    = f.check_box :is_on_time
+    On time
+EOF
+    },
+    {
+      category: 'Filters',
+      name: 'Date Range',
+      file: 'filter_date_range',
+      view: <<-EOF
 = f.date_range :flight_at
 EOF
     },
+    {
+      category: 'Filters',
+      name: 'Multi-Autocomplete',
+      file: 'filter_multi_autocomplete',
+      view: <<-EOF
+= f.multi_autocomplete :carrier, scope: 'top', placeholder: 'Carrier...'
+EOF
+    },
+    {
+      category: 'Filters',
+      name: 'String',
+      file: 'filter_string',
+      view: <<-EOF
+= f.string_filter :carrier_name, placeholder: 'Carrier name (e.g. Airlines)...', style: 'width: 175px;'
+EOF
+    },
+    {
+      category: 'Filters',
+      name: 'Configured Boolean',
+      file: 'filter_configured_boolean'
+    },
+    {
+      category: 'Filters',
+      name: 'Configured Datetime',
+      file: 'filter_configured_datetime'
+    },
+    {
+      category: 'Filters',
+      name: 'Configured Number',
+      file: 'filter_configured_number'
+    },
+    {
+      category: 'Filters',
+      name: 'Configured String',
+      file: 'filter_configured_string'
+    },
+    {
+      category: 'Dimensions',
+      name: 'Association',
+      file: 'dimension_association'
+    },
+    {
+      category: 'Dimensions',
+      name: 'Datetime Column',
+      file: 'dimension_datetime'
+    },
+    {
+      category: 'Dimensions',
+      name: 'Integer Column',
+      file: 'dimension_integer'
+    },
+    {
+      category: 'Dimensions',
+      name: 'Two Dimensions',
+      file: 'dimension_two_dimensions'
+    },
+    {
+      category: 'Dimensions',
+      name: 'Custom Dimension',
+      file: 'dimension_custom_dimension'
+    }
   ]
 
   def index

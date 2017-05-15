@@ -1,0 +1,9 @@
+measure:
+  key: flight
+  filters:
+  - key: is_on_time
+    criteria:
+      operator: true
+      value: 15
+dimensions:
+- carrier

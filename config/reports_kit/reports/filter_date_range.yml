@@ -1,9 +1,6 @@
 measure:
   key: flight
   filters:
-  - carrier
-  - carrier_name
-  - is_on_time
   - flight_at
 dimensions:
 - flight_at

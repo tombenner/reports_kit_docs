@@ -1,0 +1,9 @@
+measure:
+  key: flight
+  filters:
+  - key: flight_at
+    criteria:
+      operator: between
+      value: Oct 1, 2016 - Jan 1, 2017
+dimensions:
+- carrier
