@@ -2,8 +2,8 @@
 %html
   %head
     %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
-    %title= content_for?(:title) ? yield(:title) : 'Reports Kit Example'
-    %meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : 'Reports Kit Example'}"}
+    %title= page_title
+    %meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : ENV['SITE_NAME']}"}
     = stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'application'
     = csrf_meta_tags

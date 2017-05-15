@@ -96,6 +96,7 @@ EOF
     @key = params[:key].presence || examples.first[:key]
     @examples = examples
     @example = examples.find { |example| example.key == @key }
+    @page_title = "#{@example.category} | #{@example.name}"
     @yaml_path = "config/reports_kit/reports/#{@example.file}.yml"
     properties = YAML.load_file(@yaml_path)
     @measure = ReportsKit::Reports::Measure.new(properties['measure'])
