@@ -30,7 +30,7 @@ gem 'high_voltage'
 gem 'pg'
 gem 'timecop'
 
-gem 'reports_kit', path: '../reports_kit'
+gem 'reports_kit'
 
 group :development do
   gem 'better_errors'
