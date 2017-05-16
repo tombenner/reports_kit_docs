@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   mount ReportsKit::Engine, at: '/'
 
-  root to: 'visitors#index'
+  root to: 'categories#index'
 
-  resources :examples, only: [:index, :show], param: :key
+  resources :categories, only: [:index, :show], param: :key do
+    resources :examples, only: [:show], param: :key
+  end
 end

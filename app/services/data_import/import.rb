@@ -3,10 +3,10 @@ require 'csv'
 module DataImport
   class Import
     def perform
-      # CSV.read(Rails.root.join('data', 'airlines.csv'), headers: true).each { |row| import_airline(row) }
-      # CSV.read(Rails.root.join('data', 'airports.csv'), headers: true).each { |row| import_airport(row) }
-      # CSV.read(Rails.root.join('data', 'carriers.csv'), headers: true).each { |row| import_carrier(row) }
-      # CSV.read(Rails.root.join('data', 'markets.csv'), headers: true).each { |row| import_market(row) }
+      CSV.read(Rails.root.join('data', 'airlines.csv'), headers: true).each { |row| import_airline(row) }
+      CSV.read(Rails.root.join('data', 'airports.csv'), headers: true).each { |row| import_airport(row) }
+      CSV.read(Rails.root.join('data', 'carriers.csv'), headers: true).each { |row| import_carrier(row) }
+      CSV.read(Rails.root.join('data', 'markets.csv'), headers: true).each { |row| import_market(row) }
       CSV.read(Rails.root.join('data', 'flights.csv'), headers: true).each { |row| import_flight(row) }
     end
 

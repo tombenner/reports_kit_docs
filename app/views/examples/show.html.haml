@@ -1,21 +1,17 @@
 .container
   .row
     .col-md-2
+      %h3= @category
+      %br
       %ul.nav.nav-pills.nav-stacked
-        - last_category = nil
         - @examples.each do |example|
-          - if last_category != example.category
-            %li.category-item= example.category
-          - last_category = example.category
           %li{ role: 'presentation', class: example.key == @key ? 'active' : nil }
-            = link_to example.name, example_path(key: example.key)
+            = link_to example.name, category_example_path(example.category, example)
 
     .col-md-10
       .row
         .col-md-12
-          %h3
-            = "#{@example.category}:"
-            = @example.name
+          %h3= @example
           %br
           = render_report @example.config do |f|
             - if @example.view
