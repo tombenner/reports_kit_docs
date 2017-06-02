@@ -43,7 +43,7 @@
               %pre
                 = preserve do
                   - if @example.view
-                    = "= render_report '#{@example.file}' do\n  " + @example.view.gsub("\n", "\n  ")
+                    = "= render_report '#{@example.file}' do |f|\n  " + @example.view.gsub("\n", "\n  ")
                   - else
                     = "= render_report '#{@example.file}'"
               %br
