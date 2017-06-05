@@ -163,7 +163,7 @@ GEM
     rb-fsevent (0.9.8)
     rb-inotify (0.9.8)
       ffi (>= 0.5.0)
-    reports_kit (0.0.2)
+    reports_kit (0.0.4)
       pg
       rails
     ruby_parser (3.9.0)
