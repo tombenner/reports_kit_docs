@@ -5,5 +5,5 @@ measure:
     criteria:
       operator: '>'
       value: 15
-dimensions:
-- carrier
+  dimensions:
+  - carrier

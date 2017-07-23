@@ -5,5 +5,5 @@ measure:
     criteria:
       operator: contains
       value: airlines
-dimensions:
-- carrier
+  dimensions:
+  - carrier

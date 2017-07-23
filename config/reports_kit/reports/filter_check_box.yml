@@ -2,9 +2,9 @@ measure:
   key: flight
   filters:
   - is_on_time
-dimensions:
-- flight_at
-- carrier
+  dimensions:
+  - flight_at
+  - carrier
 chart:
   options:
     scales:

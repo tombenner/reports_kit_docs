@@ -2,9 +2,9 @@ measure:
   key: flight
   filters:
   - flight_at
-dimensions:
-- flight_at
-- carrier
+  dimensions:
+  - flight_at
+  - carrier
 chart:
   options:
     scales:

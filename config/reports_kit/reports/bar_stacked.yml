@@ -1,7 +1,8 @@
-measure: flight
-dimensions:
-- flight_at
-- carrier
+measure:
+  key: flight
+  dimensions:
+  - flight_at
+  - carrier
 chart:
   options:
     scales:

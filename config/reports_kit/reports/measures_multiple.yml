@@ -1,17 +1,21 @@
 measures:
 - key: flight
   name: All Flights
+  dimensions:
+  - carrier
 - key: flight
   name: On-time Flights
   filters:
   - key: is_on_time
     criteria:
       operator: true
+  dimensions:
+  - carrier
 - key: flight
   name: Very Delayed Flights
   filters:
   - key: is_very_delayed
     criteria:
       operator: true
-dimensions:
-- carrier
+  dimensions:
+  - carrier

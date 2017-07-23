@@ -1,6 +1,7 @@
-measure: flight
-dimensions:
-- carrier
+measure:
+  key: flight
+  dimensions:
+  - carrier
 chart:
   type: horizontalBar
   options:

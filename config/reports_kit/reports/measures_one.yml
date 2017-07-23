@@ -1,4 +1,4 @@
 measure:
   key: flight
-dimensions:
-- carrier
+  dimensions:
+  - carrier

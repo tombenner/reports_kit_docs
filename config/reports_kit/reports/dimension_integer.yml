@@ -1,6 +1,7 @@
-measure: flight
-dimensions:
-- delay
+measure:
+  key: flight
+  dimensions:
+  - delay
 chart:
   options:
     scales:

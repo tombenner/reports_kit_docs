@@ -98,10 +98,6 @@ class Example < ActiveHash::Base
 .pull-right
   = f.date_range :flight_at
 = f.multi_autocomplete :carrier, scope: 'top', placeholder: 'Carrier...'
-.checkbox
-  = label_tag :is_on_time do
-    = f.check_box :is_on_time
-    On time
 EOF
     },
     {

@@ -1,3 +1,4 @@
-measure: flight
-dimensions:
-- flight_at
+measure:
+  key: flight
+  dimensions:
+  - flight_at
