@@ -5,7 +5,7 @@ measure:
   - key: flight_at
     criteria:
       operator: between
-      value: Dec 1, 2016 - Jan 1, 2017
+      value: -3M - now
   dimensions:
   - key: flight_at
   - key: carrier
