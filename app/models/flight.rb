@@ -11,5 +11,6 @@ class Flight < ApplicationRecord
     dimension :hours_delayed, group: 'GREATEST(ROUND(flights.delay::float/60), 0)'
     filter :carrier_name, :string, column: 'carriers.name', joins: :carrier
     filter :is_on_time, :boolean, conditions: 'flights.delay <= 15'
+    filter :is_very_delayed, :boolean, conditions: 'flights.delay > 60'
   end
 end

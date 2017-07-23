@@ -1,0 +1,14 @@
+measures:
+- key: flight
+  filters:
+  - key: origin_market
+    ui_key: market
+  dimensions:
+  - market
+- key: airport
+  filters:
+  - market
+dimensions:
+- market
+ui_filters:
+  - market

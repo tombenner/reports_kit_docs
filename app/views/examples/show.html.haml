@@ -35,7 +35,7 @@
               - if existing_keys.present?
                 %p
                   %small
-                    %em Note: The #{existing_keys.map { |key| %|"chart.#{key}"| }.to_sentence } #{'option'.pluralize(existing_keys.length)} #{ existing_keys.length > 1 ? 'are' : 'is' } are passed to #{ link_to 'Chart.js', 'http://www.chartjs.org/docs/' }, so any values supported by Chart.js are supported here, too.
+                    %em Note: The #{existing_keys.map { |key| %|"chart.#{key}"| }.to_sentence } #{'option'.pluralize(existing_keys.length)} #{ existing_keys.length > 1 ? 'are' : 'is' } passed to #{ link_to 'Chart.js', 'http://www.chartjs.org/docs/' }, so any values supported by Chart.js are supported here, too.
               %br
               %h4 View
               %p

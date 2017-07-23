@@ -4,6 +4,7 @@ class Category < ActiveHash::Base
     { key: 'line_charts', name: 'Line Charts' },
     { key: 'other_charts', name: 'Other Charts' },
     { key: 'legends', name: 'Legends' },
+    { key: 'measures', name: 'Measures' },
     { key: 'filters', name: 'Filters' },
     { key: 'dimensions', name: 'Dimensions' }
   ]

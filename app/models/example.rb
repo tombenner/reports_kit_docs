@@ -81,6 +81,38 @@ class Example < ActiveHash::Base
       name: 'None'
     },
     {
+      category_key: 'measures',
+      key: 'measures_one',
+      name: 'One Measure'
+    },
+    {
+      category_key: 'measures',
+      key: 'measures_multiple',
+      name: 'Multiple Measures',
+    },
+    {
+      category_key: 'measures',
+      key: 'measures_multiple_with_filters',
+      name: 'Multiple Measures with Filters',
+      view: <<-EOF
+.pull-right
+  = f.date_range :flight_at
+= f.multi_autocomplete :carrier, scope: 'top', placeholder: 'Carrier...'
+.checkbox
+  = label_tag :is_on_time do
+    = f.check_box :is_on_time
+    On time
+EOF
+    },
+    {
+      category_key: 'measures',
+      key: 'measures_multiple_with_multiple_models',
+      name: 'Multiple Measures with Multiple Models',
+      view: <<-EOF
+= f.multi_autocomplete :market, scope: 'top', placeholder: 'Market...'
+EOF
+    },
+    {
       category_key: 'filters',
       key: 'filters',
       name: 'All',

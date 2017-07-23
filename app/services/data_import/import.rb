@@ -2,12 +2,17 @@ require 'csv'
 
 module DataImport
   class Import
+    MAX_FLIGHTS = 20_000
+
     def perform
       CSV.read(Rails.root.join('data', 'airlines.csv'), headers: true).each { |row| import_airline(row) }
+      CSV.read(Rails.root.join('data', 'markets.csv'), headers: true).each { |row| import_market(row) }
       CSV.read(Rails.root.join('data', 'airports.csv'), headers: true).each { |row| import_airport(row) }
       CSV.read(Rails.root.join('data', 'carriers.csv'), headers: true).each { |row| import_carrier(row) }
-      CSV.read(Rails.root.join('data', 'markets.csv'), headers: true).each { |row| import_market(row) }
-      CSV.read(Rails.root.join('data', 'flights.csv'), headers: true).each { |row| import_flight(row) }
+      CSV.read(Rails.root.join('data', 'flights.csv'), headers: true).each_with_index do |row, index|
+        return if index > MAX_FLIGHTS
+        import_flight(row)
+      end
     end
 
     private
@@ -25,7 +30,8 @@ module DataImport
         code: row['Code'],
         name: row['Description'].split(': ').last
       }
-      Airport.where(attributes).first_or_create!
+      attributes[:market_id] = airport_name_to_market_id(attributes[:name])
+      Airport.where(attributes.slice(:code, :name)).first_or_create!(attributes.slice(:market_id))
     end
 
     def import_carrier(row)
@@ -66,6 +72,11 @@ module DataImport
       month_offset = md5[0].to_i(16)
       day_offset = md5[1].to_i(16) + md5[2].to_i(16)
       date - month_offset.months - day_offset.days
+    end
+
+    def airport_name_to_market_id(name)
+      first_word = name.split(' ').first
+      Market.where('name ILIKE ?', "#{first_word}%").first.try(:id)
     end
   end
 end
