@@ -31,11 +31,12 @@ gem 'high_voltage'
 gem 'pg'
 gem 'timecop'
 
-gem 'reports_kit'
+gem 'reports_kit', github: 'tombenner/reports_kit'
 
 group :development do
-  gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'html2haml'
+  gem 'pry-byebug'
   gem 'pry-rails'
   gem 'rails_layout'
 end

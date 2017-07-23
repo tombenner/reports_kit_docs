@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/tombenner/reports_kit.git
+  revision: f8416a6be8b66d4535be4a9b2aef893bf9653c0d
+  specs:
+    reports_kit (0.1.0)
+      rails (>= 3)
+      spreadsheet (>= 1.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -45,11 +53,9 @@ GEM
     arel (8.0.0)
     autoprefixer-rails (7.0.1)
       execjs
-    better_errors (2.1.1)
-      coderay (>= 1.0.0)
-      erubis (>= 2.6.6)
-      rack (>= 0.9.0)
     bindex (0.5.0)
+    binding_of_caller (0.7.2)
+      debug_inspector (>= 0.0.1)
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
@@ -73,6 +79,7 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
+    debug_inspector (0.0.3)
     dotenv (2.2.1)
     dotenv-rails (2.2.1)
       dotenv (= 2.2.1)
@@ -128,6 +135,9 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    pry-byebug (3.4.2)
+      byebug (~> 9.0)
+      pry (~> 0.10)
     pry-rails (0.3.6)
       pry (>= 0.10.4)
     public_suffix (2.0.5)
@@ -163,9 +173,7 @@ GEM
     rb-fsevent (0.9.8)
     rb-inotify (0.9.8)
       ffi (>= 0.5.0)
-    reports_kit (0.0.4)
-      pg
-      rails
+    ruby-ole (1.2.12.1)
     ruby_parser (3.9.0)
       sexp_processor (~> 4.1)
     rubyzip (1.2.1)
@@ -182,6 +190,8 @@ GEM
       websocket (~> 1.0)
     sexp_processor (4.9.0)
     slop (3.6.0)
+    spreadsheet (1.1.4)
+      ruby-ole (>= 1.0)
     spring (2.0.1)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -220,7 +230,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_hash
-  better_errors
+  binding_of_caller
   bootstrap-sass (~> 3.3.6)
   byebug
   capybara (~> 2.13.0)
@@ -233,11 +243,12 @@ DEPENDENCIES
   jquery-rails
   listen (>= 3.0.5, < 3.2)
   pg
+  pry-byebug
   pry-rails
   puma (~> 3.7)
   rails (~> 5.1.0)
   rails_layout
-  reports_kit
+  reports_kit!
   sass-rails (~> 5.0)
   selenium-webdriver
   spring
