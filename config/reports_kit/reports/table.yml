@@ -1,0 +1,13 @@
+measure:
+  key: flight
+  filters:
+  - key: carrier
+  - key: flight_at
+    criteria:
+      operator: between
+      value: Dec 1, 2016 - Jan 1, 2017
+  dimensions:
+  - key: flight_at
+  - key: carrier
+    limit: 7
+format: table

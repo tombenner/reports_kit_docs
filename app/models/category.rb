@@ -3,6 +3,7 @@ class Category < ActiveHash::Base
     { key: 'bar_charts', name: 'Bar Charts' },
     { key: 'line_charts', name: 'Line Charts' },
     { key: 'other_charts', name: 'Other Charts' },
+    { key: 'tables', name: 'Tables' },
     { key: 'legends', name: 'Legends' },
     { key: 'measures', name: 'Measures' },
     { key: 'filters', name: 'Filters' },
