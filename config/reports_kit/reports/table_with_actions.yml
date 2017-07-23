@@ -1,0 +1,16 @@
+measure:
+  key: flight
+  filters:
+  - key: carrier
+  - key: flight_at
+    criteria:
+      operator: between
+      value: -3M - now
+  dimensions:
+  - key: flight_at
+  - key: carrier
+    limit: 7
+format: table
+actions:
+  - export_csv
+  - export_xls

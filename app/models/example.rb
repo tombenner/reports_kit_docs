@@ -66,6 +66,16 @@ class Example < ActiveHash::Base
 EOF
     },
     {
+      category_key: 'tables',
+      key: 'table_with_actions',
+      name: 'Table with Actions',
+      view: <<-EOF
+.pull-right
+  = f.date_range :flight_at
+= f.multi_autocomplete :carrier, scope: 'top', placeholder: 'Carrier...'
+EOF
+    },
+    {
       category_key: 'legends',
       key: 'legend_top',
       name: 'Top'
