@@ -176,7 +176,11 @@ EOF
     {
       category_key: 'filters',
       key: 'filter_configured_datetime',
-      name: 'Configured Datetime'
+      name: 'Configured Datetime',
+      view: <<-EOF
+.pull-right
+  = f.date_range :flight_at
+EOF
     },
     {
       category_key: 'filters',
