@@ -8,7 +8,7 @@ measures:
   filters:
   - key: is_on_time
     criteria:
-      operator: true
+      value: true
   dimensions:
   - carrier
 - key: flight
@@ -16,6 +16,6 @@ measures:
   filters:
   - key: is_very_delayed
     criteria:
-      operator: true
+      value: true
   dimensions:
   - carrier

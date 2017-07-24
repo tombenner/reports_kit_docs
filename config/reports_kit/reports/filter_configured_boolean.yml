@@ -3,7 +3,6 @@ measure:
   filters:
   - key: is_on_time
     criteria:
-      operator: true
-      value: 15
+      value: true
   dimensions:
   - carrier
