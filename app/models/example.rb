@@ -52,6 +52,11 @@ class Example < ActiveHash::Base
     },
     {
       category_key: 'other_charts',
+      key: 'pie',
+      name: 'Pie'
+    },
+    {
+      category_key: 'other_charts',
       key: 'radar',
       name: 'Radar'
     },
