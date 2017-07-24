@@ -30,7 +30,8 @@ module DataImport
         code: row['Code'],
         name: row['Description'].split(': ').last
       }
-      attributes[:market_id] = airport_name_to_market_id(attributes[:name])
+      market_id = airport_name_to_market_id(attributes[:name])
+      attributes[:market_id] = market_id if market_id
       Airport.where(attributes.slice(:code, :name)).first_or_create!(attributes.slice(:market_id))
     end
 
