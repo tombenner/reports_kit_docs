@@ -1,9 +1,8 @@
-measure:
-  key: flight
-  dimensions:
-  - flight_at
-  - key: carrier
-    limit: 3
+measure: flight
+dimensions:
+- flight_at
+- key: carrier
+  limit: 3
 chart:
   type: line
   datasets:

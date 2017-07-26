@@ -1,7 +1,6 @@
-measure:
-  key: flight
-  dimensions:
-  - carrier
+measure: flight
+dimensions:
+- carrier
 chart:
   type: radar
   options:

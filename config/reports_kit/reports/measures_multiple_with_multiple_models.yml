@@ -1,11 +1,11 @@
-measures:
-- key: flight
+series:
+- measure: flight
   filters:
   - key: origin_market
     ui_key: market
   dimensions:
   - origin_market
-- key: airport
+- measure: airport
   filters:
   - market
   dimensions:

@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/tombenner/reports_kit.git
-  revision: d44dc283fa1a0175856881ad036159e955b890e6
+  revision: ad3a7b1aab9d9434d07db715d691164490cb291b
   specs:
-    reports_kit (0.1.0)
+    reports_kit (0.2.0)
       rails (>= 3)
       spreadsheet (>= 1.1)
 

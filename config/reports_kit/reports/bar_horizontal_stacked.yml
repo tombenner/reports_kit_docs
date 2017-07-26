@@ -1,8 +1,7 @@
-measure:
-  key: flight
-  dimensions:
-  - origin_market
-  - carrier
+measure: flight
+dimensions:
+- origin_market
+- carrier
 chart:
   type: horizontalBar
   options:

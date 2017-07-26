@@ -1,9 +1,8 @@
-measure:
-  key: flight
-  filters:
-  - key: flight_at
-    criteria:
-      operator: between
-      value: -3M - now
-  dimensions:
-  - carrier
+measure: flight
+filters:
+- key: flight_at
+  criteria:
+    operator: between
+    value: -3M - now
+dimensions:
+- carrier

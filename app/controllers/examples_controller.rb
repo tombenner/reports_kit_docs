@@ -11,6 +11,6 @@ class ExamplesController < ApplicationController
     @page_title = "#{@example.category} | #{@example.name}"
     @yaml_path = "config/reports_kit/reports/#{@example.file}.yml"
     properties = YAML.load_file(@yaml_path)
-    @measure = ReportsKit::Reports::Measure.new(properties['measure'] || properties['measures'].first)
+    @model_filename = 'flight'
   end
 end
