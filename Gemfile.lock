@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/tombenner/reports_kit.git
-  revision: ad3a7b1aab9d9434d07db715d691164490cb291b
+  revision: 5217bdf51137ec006e1f190aa415b890715d8170
   specs:
     reports_kit (0.2.0)
       rails (>= 3)

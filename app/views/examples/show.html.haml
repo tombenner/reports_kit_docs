@@ -14,7 +14,7 @@
           %h3= @example
           .row
             .col-md-12
-              = render_report @example.config do |f|
+              = render_report @example.key do |f|
                 - if @example.view
                   = Haml::Engine.new(@example.view).render(self, { f: f })
                   %br
@@ -44,9 +44,9 @@
               %pre
                 = preserve do
                   - if @example.view
-                    = "= render_report '#{@example.file}' do |f|\n  " + @example.view.gsub("\n", "\n  ")
+                    = "= render_report '#{@example.key}' do |f|\n  " + @example.view.gsub("\n", "\n  ")
                   - else
-                    = "= render_report '#{@example.file}'"
+                    = "= render_report '#{@example.key}'"
             .col-md-5
               %h4 Model
               - model_path = "app/models/#{@model_filename}.rb"
