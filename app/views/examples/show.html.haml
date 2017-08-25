@@ -14,9 +14,10 @@
           %h3= @example
           .row
             .col-md-12
-              = render_report @example.key do |f|
+              = render_report @example.key do |r, f|
                 - if @example.view
-                  = Haml::Engine.new(@example.view).render(self, { f: f })
+                  = r.form do |f|
+                    = Haml::Engine.new(@example.view).render(self, { f: f, r: r })
                   %br
                   %br
               %br
@@ -44,7 +45,7 @@
               %pre
                 = preserve do
                   - if @example.view
-                    = "= render_report '#{@example.key}' do |f|\n  " + @example.view.gsub("\n", "\n  ")
+                    = "= render_report '#{@example.key}' do |report|\n  = report.form do |f|\n    " + @example.view.gsub("\n", "\n    ") + "\n    "
                   - else
                     = "= render_report '#{@example.key}'"
             .col-md-5
