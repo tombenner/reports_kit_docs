@@ -78,8 +78,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
-    commonmarker (0.17.0)
-      ruby-enum (~> 0.5)
     concurrent-ruby (1.0.5)
     debug_inspector (0.0.3)
     dotenv (2.2.1)
@@ -92,7 +90,6 @@ GEM
     faker (1.8.4)
       i18n (~> 0.5)
     ffi (1.9.18)
-    github-markup (1.6.1)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     haml (5.0.1)
@@ -178,8 +175,7 @@ GEM
     rb-fsevent (0.9.8)
     rb-inotify (0.9.8)
       ffi (>= 0.5.0)
-    ruby-enum (0.7.1)
-      i18n
+    redcarpet (3.4.0)
     ruby-ole (1.2.12.1)
     ruby_parser (3.9.0)
       sexp_processor (~> 4.1)
@@ -243,10 +239,8 @@ DEPENDENCIES
   byebug
   capybara (~> 2.13.0)
   coffee-rails (~> 4.2)
-  commonmarker
   dotenv-rails
   faker
-  github-markup
   haml-rails
   high_voltage
   html2haml
@@ -259,6 +253,7 @@ DEPENDENCIES
   puma (~> 3.7)
   rails (~> 5.1.0)
   rails_layout
+  redcarpet
   reports_kit!
   sass-rails (~> 5.0)
   seed_migration

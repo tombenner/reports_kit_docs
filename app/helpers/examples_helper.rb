@@ -1,5 +1,3 @@
-require 'github/markup'
-
 module ExamplesHelper
   def path_for_example(example)
     subcategory = example.subcategory
@@ -8,6 +6,8 @@ module ExamplesHelper
   end
 
   def render_example_text(example)
-    GitHub::Markup.render_s(GitHub::Markups::MARKUP_MARKDOWN, example.markdown_text).html_safe
+    renderer = Redcarpet::Render::HTML.new
+    markdown = Redcarpet::Markdown.new(renderer, fenced_code_blocks: true)
+    markdown.render(example.markdown_text).html_safe
   end
 end
