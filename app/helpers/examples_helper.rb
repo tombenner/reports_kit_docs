@@ -1,4 +1,3 @@
-require 'linguist'
 require 'github/markup'
 
 module ExamplesHelper

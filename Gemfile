@@ -29,8 +29,6 @@ gem 'bootstrap-sass', '~> 3.3.6'
 # Dependency of github-markup
 gem 'commonmarker'
 gem 'faker'
-# Dependency of github-markup
-gem 'github-linguist'
 gem 'github-markup'
 gem 'haml-rails'
 gem 'high_voltage'
