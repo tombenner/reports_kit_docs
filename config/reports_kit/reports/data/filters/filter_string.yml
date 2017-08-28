@@ -1,13 +1,10 @@
-measure: post
+measure:
+  key: post
+  name: Posts With Titles Containing "The"
 filters:
-- title
+- key: title
+  criteria:
+    operator: contains
+    value: The
 dimensions:
-- created_at
 - author
-chart:
-  options:
-    scales:
-      xAxes:
-        - stacked: true
-      yAxes:
-        - stacked: true

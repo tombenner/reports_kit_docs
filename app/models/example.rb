@@ -32,83 +32,48 @@ EOF
       name: 'Multiple Measures with Multiple Models'
     },
     {
+      subcategory_key: 'measures',
+      key: 'measures_composite',
+      name: 'Composite Measure'
+    },
+    {
+      subcategory_key: 'measures',
+      key: 'measures_custom_aggregation',
+      name: 'Custom Aggregation'
+    },
+    {
       subcategory_key: 'filters',
-      key: 'filters',
-      name: 'Multiple Filters',
+      key: 'filter_boolean',
+      name: 'Boolean'
+    },
+    {
+      subcategory_key: 'filters',
+      key: 'filter_datetime',
+      name: 'Datetime',
       view: <<-EOF
 .pull-right
   = f.date_range :created_at
-= f.multi_autocomplete :author, placeholder: 'Author...'
-= f.string_filter :title, placeholder: 'Title (e.g. The)...', style: 'width: 175px;'
-.checkbox
-  = label_tag :is_featured do
-    = f.check_box :is_featured
-    Featured
 EOF
     },
     {
       subcategory_key: 'filters',
-      key: 'filter_check_box',
-      name: 'Check Box',
-      view: <<-EOF
-.checkbox
-  = label_tag :is_featured do
-    = f.check_box :is_featured
-    Featured
-EOF
-    },
-    {
-      subcategory_key: 'filters',
-      key: 'filter_date_range',
-      name: 'Date Range',
-      view: <<-EOF
-= f.date_range :created_at
-EOF
-    },
-    {
-      subcategory_key: 'filters',
-      key: 'filter_multi_autocomplete',
-      name: 'Multi-Autocomplete',
-      view: <<-EOF
-= f.multi_autocomplete :author, placeholder: 'Author...'
-EOF
+      key: 'filter_number',
+      name: 'Number'
     },
     {
       subcategory_key: 'filters',
       key: 'filter_string',
-      name: 'String',
-      view: <<-EOF
-= f.string_filter :title, placeholder: 'Title (e.g. The)...', style: 'width: 175px;'
-EOF
-    },
-    {
-      subcategory_key: 'filters',
-      key: 'filter_configured_boolean',
-      name: 'Configured Boolean'
-    },
-    {
-      subcategory_key: 'filters',
-      key: 'filter_configured_datetime',
-      name: 'Configured Datetime',
-      view: <<-EOF
-.pull-right
-  = f.date_range :created_at
-EOF
-    },
-    {
-      subcategory_key: 'filters',
-      key: 'filter_configured_number',
-      name: 'Configured Number'
-    },
-    {
-      subcategory_key: 'filters',
-      key: 'filter_configured_string',
-      name: 'Configured String'
+      name: 'String'
     },
     {
       subcategory_key: 'dimensions',
       key: 'dimension_association',
       name: 'Association'
+    },
+    {
+      subcategory_key: 'dimensions',
+      key: 'dimension_boolean',
+      name: 'Boolean Column'
     },
     {
       subcategory_key: 'dimensions',
@@ -119,6 +84,11 @@ EOF
       subcategory_key: 'dimensions',
       key: 'dimension_integer',
       name: 'Integer Column'
+    },
+    {
+      subcategory_key: 'dimensions',
+      key: 'dimension_string',
+      name: 'String Column'
     },
     {
       subcategory_key: 'dimensions',
@@ -235,6 +205,64 @@ EOF
       subcategory_key: 'legends',
       key: 'legend_none',
       name: 'None'
+    },
+    # Interaction
+    {
+      subcategory_key: 'interaction_filters',
+      key: 'interaction_multiple_filters',
+      name: 'Multiple Filters',
+      view: <<-EOF
+.pull-right
+  = f.date_range :created_at
+= f.multi_autocomplete :author, placeholder: 'Author...'
+= f.string_filter :title, placeholder: 'Title (e.g. The)...', style: 'width: 175px;'
+.checkbox
+  = label_tag :is_featured do
+    = f.check_box :is_featured
+    Featured
+EOF
+    },
+    {
+      subcategory_key: 'interaction_filters',
+      key: 'interaction_filter_check_box',
+      name: 'Check Box',
+      view: <<-EOF
+.checkbox
+  = label_tag :is_featured do
+    = f.check_box :is_featured
+    Featured
+EOF
+    },
+    {
+      subcategory_key: 'interaction_filters',
+      key: 'interaction_filter_date_range',
+      name: 'Date Range',
+      view: <<-EOF
+= f.date_range :created_at
+EOF
+    },
+    {
+      subcategory_key: 'interaction_filters',
+      key: 'interaction_filter_multi_autocomplete',
+      name: 'Multi-Autocomplete',
+      view: <<-EOF
+= f.multi_autocomplete :author, placeholder: 'Author...'
+EOF
+    },
+    {
+      subcategory_key: 'interaction_filters',
+      key: 'interaction_filter_string',
+      name: 'String',
+      view: <<-EOF
+= f.string_filter :title, placeholder: 'Title (e.g. The)...', style: 'width: 175px;'
+EOF
+    },
+    {
+      subcategory_key: 'actions',
+      key: 'actions',
+      name: 'Actions',
+      has_report: false,
+      has_text: true
     },
     # Configuration
     {

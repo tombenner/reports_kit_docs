@@ -1,0 +1,10 @@
+measure: post
+dimensions:
+- status
+chart:
+  options:
+    scales:
+      xAxes:
+        - scaleLabel:
+            display: true
+            labelString: Status

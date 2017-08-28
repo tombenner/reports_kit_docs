@@ -43,3 +43,10 @@
         = model_path
     %pre
       = model_content
+    %br
+    %h4 Model's Columns
+    - model = example.model_filename.camelize.constantize
+    %pre
+      - model.columns.each do |column|
+        = "#{column.name.ljust(15)} #{column.type}"
+        \

@@ -6,6 +6,7 @@ class SubcategoriesController < ApplicationController
     render_404 && return unless @subcategory
     @category = @subcategory.category
     @example = @subcategory.examples.first
+    @page_title = "#{@example.category} | #{@example.subcategory} | #{@example.name}"
     render 'examples/show'
   end
 end

@@ -9,6 +9,10 @@ class Category < ActiveHash::Base
       name: 'Visualization'
     },
     {
+      key: 'interaction',
+      name: 'Interaction'
+    },
+    {
       key: 'configuration',
       name: 'Configuration'
     }

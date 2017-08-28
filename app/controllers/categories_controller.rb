@@ -6,6 +6,7 @@ class CategoriesController < ApplicationController
     render_404 && return unless @category
     @example = @category.subcategories.map(&:examples).flatten.first
     @subcategory = @example.subcategory
+    @page_title = "#{@example.category} | #{@example.subcategory} | #{@example.name}"
     render 'examples/show'
   end
 end

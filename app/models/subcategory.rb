@@ -10,6 +10,9 @@ class Subcategory < ActiveHash::Base
     { key: 'other_charts', name: 'Other Charts', category_key: 'visualization' },
     { key: 'tables', name: 'Tables', category_key: 'visualization' },
     { key: 'legends', name: 'Legends', category_key: 'visualization' },
+    # Interaction
+    { key: 'interaction_filters', name: 'Filters', category_key: 'interaction' },
+    { key: 'actions', name: 'Actions', category_key: 'interaction' },
     # Configuration
     { key: 'caching', name: 'Caching', category_key: 'configuration' },
     { key: 'concurrent_queries', name: 'Concurrent Queries', category_key: 'configuration' },

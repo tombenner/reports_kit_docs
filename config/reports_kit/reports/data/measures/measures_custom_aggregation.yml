@@ -1,0 +1,10 @@
+measure:
+  key: post
+  name: Average Time To Publish (in Days)
+  aggregation: average_time_to_publish
+filters:
+- key: is_published
+  criteria:
+    value: true
+dimensions:
+- author

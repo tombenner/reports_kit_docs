@@ -6,7 +6,9 @@ class Post < ApplicationRecord
 
   include ReportsKit::Model
   reports_kit do
+    aggregation :average_time_to_publish, [:average, 'posts.published_at - posts.created_at']
     dimension :approximate_views_count, group: 'ROUND(posts.views_count, -1)'
+    filter :is_published, :boolean, conditions: ->(relation) { relation.where(status: 'published') }
   end
 
   STATUSES = %w(draft private published).freeze

@@ -1,0 +1,16 @@
+name: 'Percent of Posts That Are Featured'
+composite_operator: '%'
+series:
+- measure: post
+  filters:
+  - author
+  - key: is_featured
+    criteria:
+      value: true
+  dimensions:
+  - author
+- measure: post
+  filters:
+  - author
+  dimensions:
+  - author
