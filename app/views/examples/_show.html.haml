@@ -1,0 +1,7 @@
+- if example.has_text
+  = render partial: 'examples/text', locals: { example: example }
+- if example.has_text && example.has_report
+  %hr
+- if example.has_report
+  = render partial: 'examples/report', locals: { example: example }
+%br

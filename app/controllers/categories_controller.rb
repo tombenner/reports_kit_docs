@@ -1,12 +1,11 @@
 class CategoriesController < ApplicationController
-  def index
-    example = Example.first
-    redirect_to category_example_path(example.category, example)
-  end
+  layout 'examples'
 
   def show
-    category = Category.find_by(key: params[:key])
-    example = category.examples.first
-    redirect_to category_example_path(example.category, example)
+    @category = Category.find_by(key: params[:key])
+    render_404 && return unless @category
+    @example = @category.subcategories.map(&:examples).flatten.first
+    @subcategory = @example.subcategory
+    render 'examples/show'
   end
 end

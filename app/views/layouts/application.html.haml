@@ -13,4 +13,4 @@
       = render 'layouts/navigation'
     %main{:role => "main"}
       = render 'layouts/messages'
-      = yield
+      = content_for?(:content) ? content_for(:content) : yield

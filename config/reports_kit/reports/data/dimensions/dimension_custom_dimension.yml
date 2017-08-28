@@ -1,0 +1,3 @@
+measure: post
+dimensions:
+- approximate_views_count

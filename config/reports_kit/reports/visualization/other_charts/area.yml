@@ -1,0 +1,11 @@
+measure: post
+dimensions:
+- created_at
+- key: tags
+  limit: 7
+chart:
+  type: line
+  options:
+    scales:
+      yAxes:
+        - stacked: true

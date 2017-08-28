@@ -1,9 +1,0 @@
-measure: flight
-dimensions:
-- carrier
-chart:
-  type: pie
-  options:
-    legend:
-      display: true
-      position: right

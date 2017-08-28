@@ -1,0 +1,38 @@
+class Subcategory < ActiveHash::Base
+  self.data = [
+    # Data
+    { key: 'measures', name: 'Measures', category_key: 'data' },
+    { key: 'dimensions', name: 'Dimensions', category_key: 'data' },
+    { key: 'filters', name: 'Filters', category_key: 'data' },
+    # Visualization
+    { key: 'bar_charts', name: 'Bar Charts', category_key: 'visualization' },
+    { key: 'line_charts', name: 'Line Charts', category_key: 'visualization' },
+    { key: 'other_charts', name: 'Other Charts', category_key: 'visualization' },
+    { key: 'tables', name: 'Tables', category_key: 'visualization' },
+    { key: 'legends', name: 'Legends', category_key: 'visualization' },
+    # Configuration
+    { key: 'caching', name: 'Caching', category_key: 'configuration' },
+    { key: 'concurrent_queries', name: 'Concurrent Queries', category_key: 'configuration' },
+    { key: 'first_day_of_the_week', name: 'First Day of the Week', category_key: 'configuration' },
+  ]
+
+  def category
+    Category.find_by(key: category_key)
+  end
+
+  def examples
+    @examples ||= Example.where(subcategory_key: key)
+  end
+
+  def show_examples_in_nav?
+    examples.length > 1
+  end
+
+  def to_param
+    key
+  end
+
+  def to_s
+    name
+  end
+end

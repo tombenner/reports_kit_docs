@@ -1,12 +1,16 @@
 main
   padding-bottom: 60px
 
-.nav-pills.nav-stacked
-  & > li > a,& > li
-    text-transform: none
-    font-size: 15px
-  & > li > a
-    padding-left: 20px
+.col-md-2 > ul.nav-pills.nav-stacked
+  a
+    background-color: #f8f8f8
+    color: #777
+  li.active > a
+    background-color: #337ab7
+    color: #fff
+    margin-bottom: 2px
 
-.row
-  .nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus
+.nav-pills.nav-stacked
+  li > ul
+    padding-left: 20px
+    margin-bottom: 5px

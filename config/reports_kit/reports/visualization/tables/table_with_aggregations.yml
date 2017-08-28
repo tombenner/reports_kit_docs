@@ -1,0 +1,21 @@
+measure: post
+filters:
+- key: author
+- key: created_at
+  criteria:
+    operator: between
+    value: -3M - now
+dimensions:
+- key: tags
+  label: Tag
+- key: author
+  limit: 7
+format: table
+report_options:
+  aggregations:
+    - from: columns
+      operator: sum
+      label: Total
+    - from: rows
+      operator: sum
+      label: Total

@@ -1,0 +1,10 @@
+.col-md-2{ style: 'padding-left: 0px;' }
+  %ul.nav.nav-pills.nav-stacked
+    - @category.subcategories.each do |subcategory|
+      %li{ role: 'presentation', class: subcategory.key == @subcategory.key ? 'active' : nil }
+        = link_to subcategory, category_subcategory_path(@category, subcategory)
+        - if @subcategory.key == subcategory.key && @subcategory.show_examples_in_nav?
+          %ul.nav.nav-pills.nav-stacked
+            - subcategory.examples.each do |example|
+              %li{ role: 'presentation', class: example.key == @example.key ? 'active' : nil }
+                = link_to example.name, path_for_example(example)

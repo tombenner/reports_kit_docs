@@ -1,17 +1,21 @@
 class Category < ActiveHash::Base
   self.data = [
-    { key: 'bar_charts', name: 'Bar Charts' },
-    { key: 'line_charts', name: 'Line Charts' },
-    { key: 'other_charts', name: 'Other Charts' },
-    { key: 'tables', name: 'Tables' },
-    { key: 'legends', name: 'Legends' },
-    { key: 'measures', name: 'Measures' },
-    { key: 'filters', name: 'Filters' },
-    { key: 'dimensions', name: 'Dimensions' }
+    {
+      key: 'data',
+      name: 'Data'
+    },
+    {
+      key: 'visualization',
+      name: 'Visualization'
+    },
+    {
+      key: 'configuration',
+      name: 'Configuration'
+    }
   ]
 
-  def examples
-    Example.where(category_key: key)
+  def subcategories
+    Subcategory.where(category_key: key)
   end
 
   def to_param

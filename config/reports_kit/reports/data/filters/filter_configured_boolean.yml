@@ -1,0 +1,9 @@
+measure:
+  key: post
+  name: Featured Posts
+filters:
+- key: is_featured
+  criteria:
+    value: true
+dimensions:
+- author

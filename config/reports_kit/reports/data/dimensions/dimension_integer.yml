@@ -1,0 +1,10 @@
+measure: post
+dimensions:
+- views_count
+chart:
+  options:
+    scales:
+      xAxes:
+        - scaleLabel:
+            display: true
+            labelString: Views

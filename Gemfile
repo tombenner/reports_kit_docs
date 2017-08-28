@@ -26,9 +26,16 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'active_hash'
 gem 'bootstrap-sass', '~> 3.3.6'
+# Dependency of github-markup
+gem 'commonmarker'
+gem 'faker'
+# Dependency of github-markup
+gem 'github-linguist'
+gem 'github-markup'
 gem 'haml-rails'
 gem 'high_voltage'
 gem 'pg'
+gem 'seed_migration'
 gem 'timecop'
 
 gem 'reports_kit', github: 'tombenner/reports_kit'

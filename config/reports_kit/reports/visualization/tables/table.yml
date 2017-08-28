@@ -1,0 +1,13 @@
+measure: post
+filters:
+- key: author
+- key: created_at
+  criteria:
+    operator: between
+    value: -3M - now
+dimensions:
+- key: created_at
+  label:
+- key: author
+  limit: 7
+format: table

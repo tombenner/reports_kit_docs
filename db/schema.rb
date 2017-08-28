@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170512052655) do
+ActiveRecord::Schema.define(version: 20170826172945) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,12 @@ ActiveRecord::Schema.define(version: 20170512052655) do
     t.datetime "updated_at", null: false
     t.index ["code"], name: "index_airports_on_code"
     t.index ["market_id"], name: "index_airports_on_market_id"
+  end
+
+  create_table "authors", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "carriers", force: :cascade do |t|
@@ -66,6 +72,56 @@ ActiveRecord::Schema.define(version: 20170512052655) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["code"], name: "index_markets_on_code"
+  end
+
+  create_table "post_views", force: :cascade do |t|
+    t.integer "post_id", null: false
+    t.string "browser", null: false
+    t.string "operating_system", null: false
+    t.string "location", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["browser"], name: "index_post_views_on_browser"
+    t.index ["location"], name: "index_post_views_on_location"
+    t.index ["operating_system"], name: "index_post_views_on_operating_system"
+    t.index ["post_id"], name: "index_post_views_on_post_id"
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.integer "author_id", null: false
+    t.string "title"
+    t.string "status", default: "draft", null: false
+    t.datetime "published_at"
+    t.boolean "is_featured", default: false, null: false
+    t.integer "views_count", default: 0, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["author_id"], name: "index_posts_on_author_id"
+    t.index ["is_featured"], name: "index_posts_on_is_featured"
+    t.index ["published_at"], name: "index_posts_on_published_at"
+    t.index ["status"], name: "index_posts_on_status"
+    t.index ["views_count"], name: "index_posts_on_views_count"
+  end
+
+  create_table "posts_tags", force: :cascade do |t|
+    t.integer "post_id", null: false
+    t.integer "tag_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["post_id", "tag_id"], name: "index_posts_tags_on_post_id_and_tag_id", unique: true
+    t.index ["tag_id"], name: "index_posts_tags_on_tag_id"
+  end
+
+  create_table "seed_migration_data_migrations", id: :serial, force: :cascade do |t|
+    t.string "version"
+    t.integer "runtime"
+    t.datetime "migrated_on"
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

@@ -1,0 +1,11 @@
+measure: post
+dimensions:
+- created_at
+- author
+chart:
+  options:
+    scales:
+      xAxes:
+        - stacked: true
+      yAxes:
+        - stacked: true

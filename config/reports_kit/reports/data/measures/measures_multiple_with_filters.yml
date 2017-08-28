@@ -1,0 +1,37 @@
+series:
+- measure:
+    key: post
+    name: Published
+  filters:
+  - key: status
+    criteria:
+      operator: equals
+      value: published
+  - author
+  - created_at
+  dimensions:
+  - author
+- measure:
+    key: post
+    name: Private
+  filters:
+  - key: status
+    criteria:
+      operator: equals
+      value: private
+  - author
+  - created_at
+  dimensions:
+  - author
+- measure:
+    key: post
+    name: Draft
+  filters:
+  - key: status
+    criteria:
+      operator: equals
+      value: draft
+  - author
+  - created_at
+  dimensions:
+  - author

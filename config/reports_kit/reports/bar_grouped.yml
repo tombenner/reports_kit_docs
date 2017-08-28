@@ -1,6 +1,0 @@
-measure: flight
-dimensions:
-- key: origin_market
-  limit: 6
-- key: carrier
-  limit: 5

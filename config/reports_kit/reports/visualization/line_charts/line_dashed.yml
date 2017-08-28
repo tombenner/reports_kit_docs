@@ -1,0 +1,12 @@
+measure: post
+dimensions:
+- created_at
+- key: author
+  limit: 3
+chart:
+  type: line
+  datasets:
+    fill: false
+    borderDash:
+      - 5
+      - 5

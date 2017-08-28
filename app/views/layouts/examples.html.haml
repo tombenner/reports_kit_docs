@@ -1,0 +1,6 @@
+= content_for :content do
+  .container
+    = render partial: 'examples/nav'
+    .col-md-10
+      = yield
+= render template: 'layouts/application'

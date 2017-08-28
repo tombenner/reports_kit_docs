@@ -1,8 +1,0 @@
-measure: flight
-filters:
-- key: carrier_name
-  criteria:
-    operator: contains
-    value: airlines
-dimensions:
-- carrier

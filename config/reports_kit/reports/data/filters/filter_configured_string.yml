@@ -1,0 +1,10 @@
+measure:
+  key: post
+  name: Posts With Titles Containing "The"
+filters:
+- key: title
+  criteria:
+    operator: contains
+    value: The
+dimensions:
+- author

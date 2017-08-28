@@ -1,0 +1,8 @@
+measure: post
+filters:
+- key: created_at
+  criteria:
+    operator: between
+    value: -3M - now
+dimensions:
+- author

@@ -1,0 +1,6 @@
+measure: post
+dimensions:
+- key: tags
+  limit: 6
+- key: author
+  limit: 5

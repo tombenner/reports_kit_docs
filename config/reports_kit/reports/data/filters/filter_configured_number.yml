@@ -1,0 +1,10 @@
+measure:
+  key: post
+  name: Posts With More Than 5 Views
+filters:
+- key: views_count
+  criteria:
+    operator: '>'
+    value: 5
+dimensions:
+- author

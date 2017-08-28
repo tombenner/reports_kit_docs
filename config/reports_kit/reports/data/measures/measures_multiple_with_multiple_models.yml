@@ -1,0 +1,11 @@
+series:
+- measure: post
+  filters:
+  - author
+  dimensions:
+  - author
+- measure: tag
+  filters:
+  - authors
+  dimensions:
+  - authors

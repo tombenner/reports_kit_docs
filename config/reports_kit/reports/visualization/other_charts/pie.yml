@@ -1,0 +1,9 @@
+measure: post
+dimensions:
+- author
+chart:
+  type: pie
+  options:
+    legend:
+      display: true
+      position: right
