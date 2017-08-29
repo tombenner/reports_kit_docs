@@ -9,7 +9,8 @@ dimensions:
 - key: tags
   label: Tag
 - key: author
-  limit: 7
+  limit: 5
+order: dimension1.label
 format: table
 report_options:
   aggregations:

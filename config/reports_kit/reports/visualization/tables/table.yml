@@ -6,8 +6,9 @@ filters:
     operator: between
     value: -3M - now
 dimensions:
-- key: created_at
-  label:
+- key: tags
+  label: Tag
 - key: author
-  limit: 7
+  limit: 5
+order: dimension1.label
 format: table
