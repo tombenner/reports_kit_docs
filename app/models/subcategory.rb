@@ -1,5 +1,9 @@
 class Subcategory < ActiveHash::Base
   self.data = [
+    # Getting Started
+    { key: 'installation', name: 'Installation', category_key: 'getting_started' },
+    { key: 'quick_start', name: 'Quick Start', category_key: 'getting_started' },
+    { key: 'how_it_works', name: 'How It Works', category_key: 'getting_started' },
     # Data
     { key: 'measures', name: 'Measures', category_key: 'data' },
     { key: 'dimensions', name: 'Dimensions', category_key: 'data' },

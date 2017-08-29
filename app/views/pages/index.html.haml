@@ -1,0 +1,25 @@
+.container.landing-page
+  .row.hero
+    .col-md-5
+      %h1{ style: 'font-size: 46px;' } Add reporting to your Rails app in minutes, not months
+      %p
+        ReportsKit is a gem that lets you easily configure interactive charts and tables in your Rails app.
+      %p
+        = link_to 'Get Started!', category_path('getting_started'), class: 'btn btn-primary btn-large btn-xlarge'
+    .col-md-7
+      .device
+        .screen
+          = image_tag 'https://raw.githubusercontent.com/tombenner/reports_kit/master/docs/images/demo.gif?raw=true', class: 'img-responsive'
+  %hr
+  .row
+    .col-md-4
+      %h3.text-center Quick setup
+      %p Install and create your first chart in less than two minutes!
+      %p
+        = link_to 'Get started!', category_path('getting_started')
+    .col-md-4
+      %h3.text-center Simple configuration
+      %p Use simple YAML to configure your charts. ReportsKit inspects column types and associations to understand how to render the chart. If you need to write raw SQL, that's supported, too!
+    .col-md-4
+      %h3.text-center Powerful features
+      %p Many chart types, customizable tables, form controls, CSV/Excel downloads, composite datasets, custom aggregations, caching, concurrent queries, and more!

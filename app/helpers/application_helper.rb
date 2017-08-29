@@ -1,7 +1,8 @@
 module ApplicationHelper
   def page_title
     title = ENV['SITE_NAME']
-    title = "#{title} | #{@page_title}" if @page_title.present?
+    subtitle = @page_title || 'Add reporting to your Rails app in minutes, not months'
+    title = "#{title} | #{subtitle}"
     title
   end
 

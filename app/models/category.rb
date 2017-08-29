@@ -1,6 +1,10 @@
 class Category < ActiveHash::Base
   self.data = [
     {
+      key: 'getting_started',
+      name: 'Getting Started'
+    },
+    {
       key: 'data',
       name: 'Data'
     },

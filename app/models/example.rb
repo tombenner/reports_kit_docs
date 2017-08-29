@@ -4,6 +4,28 @@ class Example < ActiveHash::Base
   field :model_filename, default: 'post'
 
   self.data = [
+    # Getting Started
+    {
+      subcategory_key: 'installation',
+      key: 'installation',
+      name: 'Installation',
+      has_text: true,
+      has_report: false
+    },
+    {
+      subcategory_key: 'quick_start',
+      key: 'quick_start',
+      name: 'Quick Start',
+      has_text: true,
+      has_report: false
+    },
+    {
+      subcategory_key: 'how_it_works',
+      key: 'how_it_works',
+      name: 'How It Works',
+      has_text: true,
+      has_report: false
+    },
     # Data
     {
       subcategory_key: 'measures',
