@@ -28,6 +28,12 @@ class Example < ActiveHash::Base
     },
     # Data
     {
+      subcategory_key: 'data_overview',
+      key: 'data_overview',
+      name: 'Overview',
+      has_text: true
+    },
+    {
       subcategory_key: 'measures',
       key: 'measures_one',
       name: 'One Measure',
@@ -123,6 +129,12 @@ EOF
       name: 'Custom Dimension',
     },
     # Visualization
+    {
+      subcategory_key: 'visualization_overview',
+      key: 'visualization_overview',
+      name: 'Overview',
+      has_text: true
+    },
     {
       subcategory_key: 'bar_charts',
       key: 'bar',

@@ -1,0 +1,15 @@
+measure: post
+dimensions:
+- author
+chart:
+  type: horizontalBar
+  options:
+    scales:
+      xAxes:
+        - scaleLabel:
+            display: true
+            labelString: Posts
+      yAxes:
+        - scaleLabel:
+            display: true
+            labelString: Author

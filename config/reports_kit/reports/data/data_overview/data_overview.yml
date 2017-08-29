@@ -1,0 +1,7 @@
+measure: post
+filters:
+- key: is_featured
+  criteria:
+    value: true
+dimensions:
+- tags

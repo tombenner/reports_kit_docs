@@ -5,10 +5,12 @@ class Subcategory < ActiveHash::Base
     { key: 'quick_start', name: 'Quick Start', category_key: 'getting_started' },
     { key: 'how_it_works', name: 'How It Works', category_key: 'getting_started' },
     # Data
+    { key: 'data_overview', name: 'Overview', category_key: 'data' },
     { key: 'measures', name: 'Measures', category_key: 'data' },
     { key: 'dimensions', name: 'Dimensions', category_key: 'data' },
     { key: 'filters', name: 'Filters', category_key: 'data' },
     # Visualization
+    { key: 'visualization_overview', name: 'Overview', category_key: 'visualization' },
     { key: 'bar_charts', name: 'Bar Charts', category_key: 'visualization' },
     { key: 'line_charts', name: 'Line Charts', category_key: 'visualization' },
     { key: 'other_charts', name: 'Other Charts', category_key: 'visualization' },
