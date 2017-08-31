@@ -23,10 +23,13 @@ class Subcategory < ActiveHash::Base
     { key: 'interaction_filters', name: 'Filters', category_key: 'interaction' },
     { key: 'actions', name: 'Actions', category_key: 'interaction' },
     # Configuration
+    { key: 'autocomplete', name: 'Autocomplete', category_key: 'configuration' },
     { key: 'caching', name: 'Caching', category_key: 'configuration' },
     { key: 'context_record', name: 'Context Record', category_key: 'configuration' },
     { key: 'concurrent_queries', name: 'Concurrent Queries', category_key: 'configuration' },
     { key: 'first_day_of_the_week', name: 'First Day of the Week', category_key: 'configuration' },
+    { key: 'properties', name: 'Properties', category_key: 'configuration' },
+    { key: 'report_filename', name: 'Report Filename', category_key: 'configuration' },
   ]
 
   def category

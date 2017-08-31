@@ -334,6 +334,13 @@ EOF
     },
     # Configuration
     {
+      subcategory_key: 'autocomplete',
+      key: 'autocomplete',
+      name: 'Autocomplete',
+      has_report: false,
+      has_text: true
+    },
+    {
       subcategory_key: 'caching',
       key: 'caching',
       name: 'Caching',
@@ -358,6 +365,20 @@ EOF
       subcategory_key: 'first_day_of_the_week',
       key: 'first_day_of_the_week',
       name: 'First Day of the Week',
+      has_report: false,
+      has_text: true
+    },
+    {
+      subcategory_key: 'properties',
+      key: 'properties',
+      name: 'Properties',
+      has_report: false,
+      has_text: true
+    },
+    {
+      subcategory_key: 'report_filename',
+      key: 'report_filename',
+      name: 'Report Filename',
       has_report: false,
       has_text: true
     },
