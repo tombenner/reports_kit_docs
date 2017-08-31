@@ -16,7 +16,7 @@ dimensions:
 - author
 ```
 
-But it would count all posts, and not be scoped to a particular `Blog`. It would perform a query similar to `Post.group(:author_id).count`, but we want `@blog.posts.group(:author_id).count`.
+But it would count all posts, and not be scoped to a specific `Blog` object. It would perform a query similar to `Post.group(:author_id).count`, but we want `@blog.posts.group(:author_id).count`.
 
 To do this, we would include the blog ID in `render_report`'s `context_params`:
 
