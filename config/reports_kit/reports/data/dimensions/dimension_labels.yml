@@ -1,0 +1,4 @@
+measure: post
+dimensions:
+- key: tags
+  label: Tag

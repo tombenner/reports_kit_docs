@@ -9,6 +9,9 @@ class Subcategory < ActiveHash::Base
     { key: 'measures', name: 'Measures', category_key: 'data' },
     { key: 'dimensions', name: 'Dimensions', category_key: 'data' },
     { key: 'filters', name: 'Filters', category_key: 'data' },
+    { key: 'series', name: 'Series', category_key: 'data' },
+    { key: 'limit', name: 'Limit', category_key: 'data' },
+    { key: 'order', name: 'Order', category_key: 'data' },
     # Visualization
     { key: 'visualization_overview', name: 'Overview', category_key: 'visualization' },
     { key: 'bar_charts', name: 'Bar Charts', category_key: 'visualization' },
@@ -21,6 +24,7 @@ class Subcategory < ActiveHash::Base
     { key: 'actions', name: 'Actions', category_key: 'interaction' },
     # Configuration
     { key: 'caching', name: 'Caching', category_key: 'configuration' },
+    { key: 'context_record', name: 'Context Record', category_key: 'configuration' },
     { key: 'concurrent_queries', name: 'Concurrent Queries', category_key: 'configuration' },
     { key: 'first_day_of_the_week', name: 'First Day of the Week', category_key: 'configuration' },
   ]

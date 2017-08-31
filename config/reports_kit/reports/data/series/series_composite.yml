@@ -3,7 +3,6 @@ composite_operator: '%'
 series:
 - measure: post
   filters:
-  - author
   - key: is_featured
     criteria:
       value: true
@@ -11,6 +10,5 @@ series:
   - author
 - measure: post
   filters:
-  - author
   dimensions:
   - author

@@ -1,0 +1,29 @@
+series:
+  - name: Percentage of Published Posts (%)
+    composite_operator: '%'
+    series:
+    - measure: post
+      filters:
+      - key: status
+        criteria:
+          operator: equals
+          value: published
+      dimensions:
+      - author
+    - measure: post
+      dimensions:
+      - author
+  - name: Percentage of Private Posts (%)
+    composite_operator: '%'
+    series:
+    - measure: post
+      filters:
+      - key: status
+        criteria:
+          operator: equals
+          value: private
+      dimensions:
+      - author
+    - measure: post
+      dimensions:
+      - author

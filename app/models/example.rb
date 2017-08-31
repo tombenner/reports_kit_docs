@@ -24,7 +24,7 @@ class Example < ActiveHash::Base
       key: 'how_it_works',
       name: 'How It Works',
       has_text: true,
-      has_report: false
+      has_report: true
     },
     # Data
     {
@@ -35,34 +35,9 @@ class Example < ActiveHash::Base
     },
     {
       subcategory_key: 'measures',
-      key: 'measures_one',
-      name: 'One Measure',
+      key: 'measures_overview',
+      name: 'Overview',
       has_text: true
-    },
-    {
-      subcategory_key: 'measures',
-      key: 'measures_multiple',
-      name: 'Multiple Measures',
-    },
-    {
-      subcategory_key: 'measures',
-      key: 'measures_multiple_with_filters',
-      name: 'Multiple Measures with Filters',
-      view: <<-EOF
-.pull-right
-  = f.date_range :created_at
-= f.multi_autocomplete :author, placeholder: 'Author...'
-EOF
-    },
-    {
-      subcategory_key: 'measures',
-      key: 'measures_multiple_with_multiple_models',
-      name: 'Multiple Measures with Multiple Models'
-    },
-    {
-      subcategory_key: 'measures',
-      key: 'measures_composite',
-      name: 'Composite Measure'
     },
     {
       subcategory_key: 'measures',
@@ -72,12 +47,14 @@ EOF
     {
       subcategory_key: 'filters',
       key: 'filter_boolean',
-      name: 'Boolean'
+      name: 'Boolean',
+      has_text: true
     },
     {
       subcategory_key: 'filters',
       key: 'filter_datetime',
       name: 'Datetime',
+      has_text: true,
       view: <<-EOF
 .pull-right
   = f.date_range :created_at
@@ -127,6 +104,62 @@ EOF
       subcategory_key: 'dimensions',
       key: 'dimension_custom_dimension',
       name: 'Custom Dimension',
+    },
+    {
+      subcategory_key: 'dimensions',
+      key: 'dimension_labels',
+      name: 'Labels',
+      has_text: true
+    },
+    {
+      subcategory_key: 'dimensions',
+      key: 'dimension_limits',
+      name: 'Limits',
+      has_text: true
+    },
+    {
+      subcategory_key: 'series',
+      key: 'series_multiple',
+      name: 'Multiple Series',
+    },
+    {
+      subcategory_key: 'series',
+      key: 'series_multiple_with_filters',
+      name: 'Multiple Series with Filters',
+      view: <<-EOF
+.pull-right
+  = f.date_range :created_at
+= f.multi_autocomplete :author, placeholder: 'Author...'
+EOF
+    },
+    {
+      subcategory_key: 'series',
+      key: 'series_multiple_with_multiple_models',
+      name: 'Multiple Series with Multiple Models'
+    },
+    {
+      subcategory_key: 'series',
+      key: 'series_composite',
+      name: 'Composite Series',
+      has_text: true
+    },
+    {
+      subcategory_key: 'series',
+      key: 'series_multiple_composite',
+      name: 'Multiple Composite Series',
+      has_text: true
+    },
+    {
+      subcategory_key: 'limit',
+      key: 'limit_overview',
+      name: 'Limit',
+      has_text: true
+    },
+    {
+      subcategory_key: 'order',
+      key: 'order_overview',
+      name: 'Order',
+      has_text: true
     },
     # Visualization
     {
@@ -243,8 +276,9 @@ EOF
     # Interaction
     {
       subcategory_key: 'interaction_filters',
-      key: 'interaction_multiple_filters',
-      name: 'Multiple Filters',
+      key: 'interaction_filters_overview',
+      name: 'Overview',
+      has_text: true,
       view: <<-EOF
 .pull-right
   = f.date_range :created_at
@@ -310,6 +344,13 @@ EOF
       subcategory_key: 'concurrent_queries',
       key: 'concurrent_queries',
       name: 'Concurrent Queries',
+      has_report: false,
+      has_text: true
+    },
+    {
+      subcategory_key: 'context_record',
+      key: 'context_record',
+      name: 'Context Record',
       has_report: false,
       has_text: true
     },

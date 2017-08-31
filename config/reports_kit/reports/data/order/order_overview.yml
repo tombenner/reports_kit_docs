@@ -1,0 +1,4 @@
+measure: post
+dimensions:
+- tags
+order: dimension1.label asc

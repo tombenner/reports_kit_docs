@@ -1,0 +1,3 @@
+measure: post
+dimensions:
+- created_at
