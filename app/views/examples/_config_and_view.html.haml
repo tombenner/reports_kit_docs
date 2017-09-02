@@ -1,0 +1,27 @@
+- chart_position_text = local_assigns[:chart_position_text] || 'above'
+%p
+  %em To create the chart #{chart_position_text}, simply add the following YAML file and call <code>render_report</code> in any view:
+%h4 YAML
+%p
+  %code
+    = example.display_yaml_path
+%pre
+  = preserve do
+    = example.config.to_yaml.gsub(/^---/, '')
+- keys = %w(type datasets options)
+- existing_keys = keys.select { |key| example.config.to_yaml.include?(" #{key}:") }
+- if existing_keys.present?
+  %p
+    %small
+      %em Note: The #{existing_keys.map { |key| %|"chart.#{key}"| }.to_sentence } #{'option'.pluralize(existing_keys.length)} #{ existing_keys.length > 1 ? 'are' : 'is' } passed to #{ link_to 'Chart.js', 'http://www.chartjs.org/' }, so any values supported by Chart.js are supported here, too.
+%br
+%h4 View
+%p
+  %code
+    = "app/views/my_controller/my_view.html.haml"
+%pre
+  = preserve do
+    - if example.view
+      = "= render_report '#{example.key}' do |report|\n  = report.form do |f|\n    " + example.view.gsub("\n", "\n    ") + "\n    "
+    - else
+      = "= render_report '#{example.key}'"

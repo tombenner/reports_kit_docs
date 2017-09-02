@@ -24,3 +24,5 @@ Rails.application.routes.draw do
   # ...
 end
 ```
+
+To create your first report, use the [Quick Start](/categories/getting_started/subcategories/quick_start)!

@@ -4,6 +4,20 @@ class Example < ActiveHash::Base
   field :model_filename, default: 'post'
 
   self.data = [
+    # Demo
+    {
+      subcategory_key: 'demo',
+      key: 'demo'
+    },
+    {
+      subcategory_key: 'demo',
+      key: 'demo_2',
+      view: <<-EOF
+.pull-right
+  = f.date_range :created_at
+= f.multi_autocomplete :author, placeholder: 'Author...'
+EOF
+    },
     # Getting Started
     {
       subcategory_key: 'installation',

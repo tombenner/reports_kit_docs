@@ -1,5 +1,12 @@
 class Category < ActiveHash::Base
+  field :show_in_nav, default: true
+
   self.data = [
+    {
+      key: 'demo',
+      name: 'Demo',
+      show_in_nav: false
+    },
     {
       key: 'getting_started',
       name: 'Getting Started'

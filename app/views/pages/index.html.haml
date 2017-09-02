@@ -1,7 +1,7 @@
 .container.landing-page
   .row.hero
     .col-md-5
-      %h1{ style: 'font-size: 46px;' } Add reporting to your Rails app in minutes, not months
+      %h1 Add reporting to your Rails app in minutes, not months
       %p
         ReportsKit is a gem that lets you easily configure interactive charts and tables in your Rails app.
       %p
@@ -23,3 +23,56 @@
     .col-md-4
       %h3.text-center Powerful features
       %p Many chart types, customizable tables, form controls, CSV/Excel downloads, composite datasets, custom aggregations, caching, concurrent queries, and more!
+  %hr
+  .row
+    .col-md-12.text-center
+      %h1 Examples
+  .row
+    .col-md-6.col-md-offset-3
+      %h3.text-center Your existing model
+      %br
+      %p ReportsKit works with your existing ActiveRecord models. Let's say that you have a <code>Post</code> model with a <code>belongs_to :author</code> association:
+    .col-md-6.col-md-offset-3
+      %pre
+        = preserve do
+          :escaped
+            class Post < ApplicationModel
+              belongs_to :author
+            end
+
+  %br
+  .row
+    .col-md-12.text-center
+      %h3 Example #1: Bar chart
+      %br
+      %br
+  .row
+    .col-md-6
+      %p Given the <code>Post</code> model above, you can create a bar chart that shows the number of posts per author with just three lines of YAML and one line in the view:
+      = render partial: 'examples/config_and_view', locals: { example: @example, chart_position_text: 'on the right' }
+    .col-md-6
+      = render partial: 'examples/render_report', locals: { example: @example }
+  %hr
+  .row
+    .col-md-12.text-center
+      %h3 Example #2: Area chart with filters
+      %br
+      %br
+  .row
+    .col-md-6
+      %p Given the <code>Post</code> model above, you can also create an area chart that has form filters with just a few more lines of YAML and view code:
+      %br
+      = render partial: 'examples/config_and_view', locals: { example: @example_2, chart_position_text: 'on the right' }
+    .col-md-6
+      = render partial: 'examples/render_report', locals: { example: @example_2 }
+  %hr
+  .row
+    .col-md-6.col-md-offset-3.text-center
+      %h3 Want to create reports for your models?
+      %br
+      %br
+      %p
+        = link_to 'Get Started!', category_path('getting_started'), class: 'btn btn-primary btn-large btn-xlarge'
+  %hr
+  %br
+  %br
