@@ -246,6 +246,7 @@ EOF
       subcategory_key: 'tables',
       key: 'table',
       name: 'Table',
+      has_text: true,
       view: <<-EOF
 .pull-right
   = f.date_range :created_at

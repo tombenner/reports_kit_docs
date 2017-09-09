@@ -1,0 +1,1 @@
+Any chart can be converted into a table by simply adding `format: table` to the YAML (see below). Tables are sortable via clickable column headings, and they support just about all of the same functionality that charts do.

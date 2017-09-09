@@ -19,11 +19,75 @@
         = link_to 'Get started!', category_path('getting_started')
     .col-md-4
       %h3.text-center Simple configuration
-      %p Use simple YAML to configure your charts. ReportsKit inspects column types and associations to understand how to render the chart. If you need to write raw SQL, that's supported, too!
+      %p To simplify implementation and maintenance, each report only requires a single YAML file and a line of view code. If you need to write raw SQL, that's supported, too!
+
     .col-md-4
       %h3.text-center Powerful features
-      %p Many chart types, customizable tables, form controls, CSV/Excel downloads, composite datasets, custom aggregations, caching, concurrent queries, and more!
+      %p Many chart types, customizable tables, form controls, CSV/Excel downloads, composite series, custom aggregations, caching, concurrent queries, and more!
+
   %hr
+
+  %a{ name: 'features' }
+  .row
+    .col-md-12.text-center
+      %h1 Features
+      %p.text-muted This is just a subset of ReportsKit's many features. Browse the rest of this site to see more!
+      %br
+
+  .row
+    .col-md-4
+      %h3.text-center
+        = link_to 'Form filters', subcategory_path('interaction_filters')
+      %br
+      %p Add date range filters, autocompletes of associated models, check boxes filters, and more with just a single line in your view.
+    .col-md-4
+      %h3.text-center
+        = link_to 'Tables', subcategory_path('tables')
+      %br
+      %p Change a chart into a table with a single line of YAML. Tables are sortable and have almost exactly the same configuration as charts.
+    .col-md-4
+      %h3.text-center
+        = link_to 'Chart customization', category_path('visualization')
+      %br
+      %p Customize a large variety of chart types by using any of Chart.js's options in the report's YAML file.
+
+  .row
+    .col-md-4
+      %h3.text-center
+        = link_to 'Multiple series', example_path('series_multiple')
+      %br
+      %p Easily create reports of multiple series with optional form filters, or use a composite series to show the percentage, sum, or difference of multiple series.
+    .col-md-4
+      %h3.text-center
+        = link_to 'Record-scoped reports', subcategory_path('context_record')
+      %br
+      %p Create reports showing the data associated with a single User record (or any other record) using a Context Record.
+    .col-md-4
+      %h3.text-center
+        = link_to 'CSV/Excel downloads', subcategory_path('actions')
+      %br
+      %p Let users easily download data with the built-in CSV and Excel download buttons.
+
+  .row
+    .col-md-4
+      %h3.text-center
+        ActiveRecord integration
+      %br
+      %p ReportsKit inspects models, column types, and associations to understand how to render each report.
+    .col-md-4
+      %h3.text-center
+        = link_to 'Convention over configuration', 'http://rubyonrails.org/doctrine/#convention-over-configuration', target: '_blank'
+      %br
+      %p To simplify implementation and maintenance, each report only requires a single YAML file and a single line of view code. All of the defaults are sensible but overridable.
+    .col-md-4
+      %h3.text-center
+        Performance
+      %br
+      %p Each report's data is fetched asynchronously as JSON, and caching and concurrent queries (for multiple series) can each be enabled with a single line.
+
+  %hr
+
+  %a{ name: 'examples' }
   .row
     .col-md-12.text-center
       %h1 Examples

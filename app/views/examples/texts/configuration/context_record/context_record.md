@@ -1,6 +1,8 @@
-Configuring a context record allows you to scope a report to only include data associated with a single ActiveRecord object.
+Configuring a context record allows you to scope a report to only include data associated with a single record.
 
-For example, let's say that we have a `Blog` model that `has_many :posts`, and on each `blogs#show` view, we want to show a chart of the number of posts by author for that blog.
+For example, let's say that we have a `Blog` model that `has_many :posts`, and on each `blogs#show` view, we want to show a chart of the number of posts by author for that specific blog.
+
+Here's our model:
 
 ```ruby
 class Blog < ApplicationRecord
@@ -16,7 +18,7 @@ dimensions:
 - author
 ```
 
-But it would count all posts, and not be scoped to a specific `Blog` object. It would perform a query similar to `Post.group(:author_id).count`, but we want `@blog.posts.group(:author_id).count`.
+But it would count all posts, and not be scoped to a specific `Blog` record. It would perform a query similar to `Post.group(:author_id).count`, but we want `@blog.posts.group(:author_id).count`.
 
 To do this, we would include the blog ID in `render_report`'s `context_params`:
 
