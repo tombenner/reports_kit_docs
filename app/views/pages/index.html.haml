@@ -68,23 +68,6 @@
       %br
       %p Let users easily download data with the built-in CSV and Excel download buttons.
 
-  .row
-    .col-md-4
-      %h3.text-center
-        ActiveRecord integration
-      %br
-      %p ReportsKit inspects models, column types, and associations to understand how to render each report.
-    .col-md-4
-      %h3.text-center
-        = link_to 'Convention over configuration', 'http://rubyonrails.org/doctrine/#convention-over-configuration', target: '_blank'
-      %br
-      %p To simplify implementation and maintenance, each report only requires a single YAML file and a single line of view code. All of the defaults are sensible but overridable.
-    .col-md-4
-      %h3.text-center
-        Performance
-      %br
-      %p Each report's data is fetched asynchronously as JSON, and caching and concurrent queries (for multiple series) can each be enabled with a single line.
-
   %hr
 
   %a{ name: 'examples' }
