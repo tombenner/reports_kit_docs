@@ -10,6 +10,9 @@
     .collapse.navbar-collapse
       %ul.nav.navbar-nav
         = render 'layouts/navigation_links'
+      %ul.nav.navbar-nav.navbar-right
+        %li.github-button-container
+          = link_to 'Star', 'https://github.com/tombenner/reports_kit', class: 'github-button', data: { 'icon' => 'octicon-star', 'show-count' => true }, 'aria-label' => 'Star tombenner/reports_kit on GitHub'
 %br
 %br
 %br
