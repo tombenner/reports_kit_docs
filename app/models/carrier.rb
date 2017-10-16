@@ -10,10 +10,6 @@ class Carrier < ApplicationRecord
     .limit(30)
   }
 
-  reports_kit do
-    autocomplete_scope :top
-  end
-
   def to_s
     name
   end
