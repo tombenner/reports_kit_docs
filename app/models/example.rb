@@ -85,6 +85,14 @@ EOF
       name: 'String'
     },
     {
+      subcategory_key: 'contextual_filters',
+      key: 'contextual_filters',
+      name: 'Contextual Filters',
+      has_text: true,
+      render_report_args: { context_params: { author_id: Author.first.id } },
+      render_report_args_string: 'context_params: { author_id: current_user.id }'
+    },
+    {
       subcategory_key: 'dimensions',
       key: 'dimension_association',
       name: 'Association'
@@ -367,6 +375,13 @@ EOF
       subcategory_key: 'concurrent_queries',
       key: 'concurrent_queries',
       name: 'Concurrent Queries',
+      has_report: false,
+      has_text: true
+    },
+    {
+      subcategory_key: 'context_params_modification',
+      key: 'context_params_modification',
+      name: 'Context Params Modification',
       has_report: false,
       has_text: true
     },

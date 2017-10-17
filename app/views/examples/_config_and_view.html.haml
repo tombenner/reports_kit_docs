@@ -22,6 +22,6 @@
 %pre
   = preserve do
     - if example.view
-      = "= render_report '#{example.key}' do |report|\n  = report.form do |f|\n    " + example.view.gsub("\n", "\n    ") + "\n    "
+      = "= render_report #{render_report_args_string(example)} do |report|\n  = report.form do |f|\n    " + example.view.gsub("\n", "\n    ") + "\n    "
     - else
-      = "= render_report '#{example.key}'"
+      = "= render_report #{render_report_args_string(example)}"

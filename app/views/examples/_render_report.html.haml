@@ -1,4 +1,4 @@
-= render_report example.file do |r, f|
+= render_report example.file, example.render_report_args || {} do |r, f|
   - if example.view
     = r.form do |f|
       = Haml::Engine.new(example.view).render(self, { f: f, r: r })
