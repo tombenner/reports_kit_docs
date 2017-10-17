@@ -59,9 +59,9 @@
       %p Easily create reports of multiple series with optional form filters, or use a composite series to show the percentage, sum, or difference of multiple series.
     .col-md-4
       %h3.text-center
-        = link_to 'Record-scoped reports', subcategory_path('context_record')
+        = link_to 'Record-scoped reports', subcategory_path('contextual_filters')
       %br
-      %p Create reports showing the data associated with a single User record (or any other record) using a Context Record.
+      %p Create reports showing the data associated with a single User record (or any other records or scopes) using #{link_to('contextual filters', subcategory_path('contextual_filters'))}.
     .col-md-4
       %h3.text-center
         = link_to 'CSV/Excel downloads', subcategory_path('actions')

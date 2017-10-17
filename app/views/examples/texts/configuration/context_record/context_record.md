@@ -1,3 +1,5 @@
+*N.B. Context records have been deprecated. Please use [contextual filters](/subcategories/contextual_filters) instead.*
+
 Configuring a context record allows you to scope a report to only include data associated with a single record.
 
 For example, let's say that we have a `Blog` model that `has_many :posts`, and on each `blogs#show` view, we want to show a chart of the number of posts by author for that specific blog.
