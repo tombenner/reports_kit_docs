@@ -1,0 +1,7 @@
+measure: post
+filters:
+- key: author
+  contextual_filters:
+  - for_author
+dimensions:
+- created_at

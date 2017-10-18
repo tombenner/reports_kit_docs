@@ -87,10 +87,21 @@ EOF
     {
       subcategory_key: 'contextual_filters',
       key: 'contextual_filters',
-      name: 'Contextual Filters',
+      name: 'Overview',
       has_text: true,
       render_report_args: { context_params: { author_id: Author.first.id } },
       render_report_args_string: 'context_params: { author_id: current_user.id }'
+    },
+    {
+      subcategory_key: 'contextual_filters',
+      key: 'contextual_filters_in_multi_autocompletes',
+      name: 'Use in Multi-Autocompletes',
+      has_text: true,
+      render_report_args: { context_params: { author_id: Author.where("name < 'F'").pluck(:id) } },
+      render_report_args_string: %|context_params: { author_id: Author.where("name < 'F'").pluck(:id) }|,
+      view: <<-EOF
+= f.multi_autocomplete :author, placeholder: 'Author...'
+EOF
     },
     {
       subcategory_key: 'dimensions',
@@ -343,6 +354,13 @@ EOF
     },
     {
       subcategory_key: 'interaction_filters',
+      key: 'interaction_filter_multi_autocomplete_filtering',
+      name: 'Multi-Autocomplete Results Filtering',
+      has_report: false,
+      has_text: true
+    },
+    {
+      subcategory_key: 'interaction_filters',
       key: 'interaction_filter_string',
       name: 'String',
       view: <<-EOF
@@ -360,7 +378,7 @@ EOF
     {
       subcategory_key: 'autocomplete',
       key: 'autocomplete',
-      name: 'Autocomplete',
+      name: 'Autocomplete Results',
       has_report: false,
       has_text: true
     },

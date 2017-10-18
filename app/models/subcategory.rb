@@ -23,10 +23,10 @@ class Subcategory < ActiveHash::Base
     { key: 'tables', name: 'Tables', category_key: 'visualization' },
     { key: 'legends', name: 'Legends', category_key: 'visualization' },
     # Interaction
-    { key: 'interaction_filters', name: 'Filters', category_key: 'interaction' },
+    { key: 'interaction_filters', name: 'Form Filters', category_key: 'interaction' },
     { key: 'actions', name: 'Actions', category_key: 'interaction' },
     # Configuration
-    { key: 'autocomplete', name: 'Autocomplete', category_key: 'configuration' },
+    { key: 'autocomplete', name: 'Autocomplete Results', category_key: 'configuration' },
     { key: 'caching', name: 'Caching', category_key: 'configuration' },
     { key: 'context_params_modification', name: 'Context Params Modification', category_key: 'configuration' },
     { key: 'context_record', name: 'Context Record', category_key: 'configuration' },

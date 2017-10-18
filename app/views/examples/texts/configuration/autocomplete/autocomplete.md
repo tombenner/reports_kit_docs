@@ -1,4 +1,4 @@
-The [multi-autocomplete form filter](/examples/interaction_filter_multi_autocomplete) lets users easily filter by associated records. By default, it uses the model's `#to_s` method as the text of each result, but if you need to use custom filtering logic or show custom text, you can use `config.autocomplete_results_method`.
+[Multi-autocompletes](/examples/interaction_filter_multi_autocomplete) let users interactively filter reports by associated records. By default, it uses the model's `#to_s` method as the text of each result, but if you need to use custom filtering logic or show custom text, you can use `config.autocomplete_results_method`.
 
 `config.autocomplete_results_method` accepts the following arguments:
 
