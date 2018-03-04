@@ -1,0 +1,14 @@
+data_method: MyDataMethods.posts_by_author
+chart:
+  options:
+    legend:
+      display: false
+    scales:
+      xAxes:
+      - scaleLabel:
+          display: true
+          labelString: Author
+      yAxes:
+      - scaleLabel:
+          display: true
+          labelString: Posts

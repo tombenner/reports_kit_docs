@@ -12,7 +12,7 @@ To set up the database locally, run the following:
 
 ```bash
 rake db:setup
-rake data_import:import
+rake seed:migrate
 ```
 
 Then start the Rails app:

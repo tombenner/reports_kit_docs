@@ -1,0 +1,22 @@
+data_method: MyDataMethods.posts_by_author_with_filters
+ui_filters:
+- key: author
+  autocomplete_method: MyAutocompleteMethods.author
+- created_at
+- is_featured
+- title
+chart:
+  options:
+    legend:
+      display: false
+    scales:
+      xAxes:
+      - scaleLabel:
+          display: true
+          labelString: Author
+      yAxes:
+      - scaleLabel:
+          display: true
+          labelString: Posts
+        ticks:
+          beginAtZero: true

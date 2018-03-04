@@ -45,7 +45,8 @@ EOF
       subcategory_key: 'data_overview',
       key: 'data_overview',
       name: 'Overview',
-      has_text: true
+      has_text: true,
+      has_report: false
     },
     {
       subcategory_key: 'measures',
@@ -193,6 +194,40 @@ EOF
       key: 'order_overview',
       name: 'Order',
       has_text: true
+    },
+    {
+      subcategory_key: 'data_methods',
+      key: 'data_methods',
+      name: 'Overview',
+      has_text: true
+    },
+    {
+      subcategory_key: 'data_methods',
+      key: 'data_methods_one_dimension',
+      name: 'One Dimension',
+      has_text: true
+    },
+    {
+      subcategory_key: 'data_methods',
+      key: 'data_methods_two_dimensions',
+      name: 'Two Dimensions',
+      has_text: true
+    },
+    {
+      subcategory_key: 'data_methods',
+      key: 'data_methods_form_filters',
+      name: 'Form Filters',
+      has_text: true,
+      view: <<-EOF
+.pull-right
+  = f.date_range :created_at
+= f.multi_autocomplete :author, placeholder: 'Author...'
+= f.string_filter :title, placeholder: 'Title (e.g. The)...', style: 'width: 175px;'
+.checkbox
+  = label_tag :is_featured do
+    = f.check_box :is_featured
+    Featured
+EOF
     },
     # Visualization
     {

@@ -25,3 +25,13 @@
       = "= render_report #{render_report_args_string(example)} do |report|\n  = report.form do |f|\n    " + example.view.gsub("\n", "\n    ") + "\n    "
     - else
       = "= render_report #{render_report_args_string(example)}"
+
+- if example.config['data_method']
+  %br
+  %h4 Data Methods
+  %p
+    %code
+      = "app/services/my_data_methods.rb"
+  %pre
+    = preserve do
+      = File.read(Rails.root.join('app', 'services', 'my_data_methods.rb'))

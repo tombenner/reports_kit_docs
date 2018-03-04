@@ -15,6 +15,7 @@ class Subcategory < ActiveHash::Base
     { key: 'series', name: 'Series', category_key: 'data' },
     { key: 'limit', name: 'Limit', category_key: 'data' },
     { key: 'order', name: 'Order', category_key: 'data' },
+    { key: 'data_methods', name: 'Data Methods', category_key: 'data' },
     # Visualization
     { key: 'visualization_overview', name: 'Overview', category_key: 'visualization' },
     { key: 'bar_charts', name: 'Bar Charts', category_key: 'visualization' },

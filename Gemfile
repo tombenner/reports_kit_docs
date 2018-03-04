@@ -27,6 +27,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'active_hash'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'faker'
+gem 'groupdate'
 gem 'haml-rails'
 gem 'high_voltage'
 gem 'pg'

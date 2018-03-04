@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/tombenner/reports_kit.git
-  revision: d57840ffb5746159ffeec743b6ccdfe08557966f
+  revision: bb08ae545cf9301778ab6de1c304c37ec5d4496c
   specs:
-    reports_kit (0.5.0)
+    reports_kit (0.6.0)
       rails (>= 3)
       spreadsheet (>= 1.1)
 
@@ -92,6 +92,8 @@ GEM
     ffi (1.9.18)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
+    groupdate (3.2.0)
+      activesupport (>= 3)
     haml (5.0.1)
       temple (>= 0.8.0)
       tilt
@@ -194,7 +196,7 @@ GEM
       websocket (~> 1.0)
     sexp_processor (4.9.0)
     slop (3.6.0)
-    spreadsheet (1.1.4)
+    spreadsheet (1.1.5)
       ruby-ole (>= 1.0)
     spring (2.0.1)
       activesupport (>= 4.2)
@@ -241,6 +243,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   dotenv-rails
   faker
+  groupdate
   haml-rails
   high_voltage
   html2haml

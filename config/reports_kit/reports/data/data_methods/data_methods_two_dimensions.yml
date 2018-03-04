@@ -1,0 +1,14 @@
+data_method: MyDataMethods.posts_by_created_at_week_and_author
+chart:
+  options:
+    scales:
+      xAxes:
+      - scaleLabel:
+          display: true
+          labelString: Creation date
+        stacked: true
+      yAxes:
+      - scaleLabel:
+          display: true
+          labelString: Posts
+        stacked: true
