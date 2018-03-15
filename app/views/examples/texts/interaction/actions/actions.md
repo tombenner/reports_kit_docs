@@ -4,7 +4,7 @@ By default, ReportsKit shows two action buttons for each report: `Download CSV` 
 = render_report 'my_report', actions: []
 ```
 
-To only show one of the two, pass either `'export_csv'` or `'export_excel'` as the only array element:
+To only show one of the two, pass either `'export_csv'` or `'export_xls'` as the only array element:
 
 ```haml
 = render_report 'my_report', actions: ['export_csv']
